@@ -1,0 +1,22 @@
+<button mat-button [matMenuTriggerFor]="menu">
+	<div class="header-cart navbar-nav">
+	    <button class="btn btn-default">
+	        <span class="cart-title">Shopping cart</span>
+	        <div *ngIf="(totalItems) else noItems">
+		        <span class="label label-info cart-item"> {{totalItems}} items</span>
+		        <span class="label label-success cart-item"> 
+		        	{{totalPrice | currency : '$'}}</span>
+		    </div>
+		    <ng-template #noItems>
+		    	<span class="cart-item">  is empty</span>
+		    </ng-template>
+	    </button>
+	</div>
+</button>
+
+<mat-menu #menu="matMenu">
+  In cart {{totalItems}} of price $ {{totalPrice}}
+
+  <input type="button" value ="Procced to check out">
+</mat-menu>
+

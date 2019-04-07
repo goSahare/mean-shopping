@@ -1,0 +1,13 @@
+<div class="nav-bar">
+	<mat-toolbar color="warm">  
+		<mat-toolbar-row class="icons">
+			<a routerLink="/home"><mat-icon class="icon-center" >home</mat-icon> </a>
+			<a class="login icon-center" *ngFor="let brand of brands;let last = last" 
+				[routerLink]="['/sub-products', brand.name]">
+				{{brand.name}} 
+				<span *ngIf="!last"> | </span>
+			</a>
+			
+		</mat-toolbar-row>
+	</mat-toolbar>
+</div>

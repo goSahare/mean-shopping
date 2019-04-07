@@ -1,0 +1,17 @@
+<div class="flex-container">
+	<div class="product-thumbnail" 
+		*ngFor="let item of products | sortBy : sortByMethod; let i = index">	
+			<span class="price">{{item.price | currency : '$'}}</span>
+			<img class="image" alt="try again" 
+					[src]="'../../assets/images/160/' + item.images[item.mainImageIndex]">
+
+			<a [routerLink]="['/product-info', item._id]" >
+					{{item.title | titlecase}}</a>
+			<p class="description">{{item.description | slice : 0 : 80}} ...</p>
+			<div class="pro-buttons">
+				<input type="button" name="Add To" value="Add To" 
+				(click)="addToClick(item)">
+				<input type="button" name="Buy now" value="Buy now">
+			</div>
+	</div>
+</div>	

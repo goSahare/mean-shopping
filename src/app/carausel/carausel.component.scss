@@ -1,0 +1,15 @@
+.carousel-container{
+  padding: 2% 0;
+  margin: 	auto;
+  margin-top: 50px;	
+  border-bottom:2px solid lightgrey;
+
+
+}
+
+.slide{
+  width:100%;
+}
+.carousel-item{
+    transition: transform 2s ease-in-out,-webkit-transform 2s ease-in-out !important;
+}
