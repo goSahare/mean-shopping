@@ -5,11 +5,18 @@
     background-size: cover;
 }
 
-.sub-product-container{
+.sub-product-container, .item-container{
     display: flex;
 
 }
+
+.item-container{
+	margin-bottom: 25px;
+}
 .side-tool-bar{
     width: 15%;
+    min-width: 120px;
 }
-
+.mat-toolbar-row{
+	height: 30px;
+}

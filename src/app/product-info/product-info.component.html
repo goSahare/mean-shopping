@@ -1,28 +1,20 @@
 <div class="promo-banner" ></div>
 <hr/>
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="side" opened>
-	<mat-toolbar color="warm">
-		<mat-toolbar-row class="mat-toolbar-row" 
-			(click)="rowClick(0)"
-			[ngClass]="(clickedButton == 0) ? 'blue' : 'red'">
-			Overview
-		</mat-toolbar-row>
-		<mat-toolbar-row class="mat-toolbar-row" (click)="rowClick(1)"
-			[ngClass]="(clickedButton == 1) ? 'blue' : 'red'">
-			Comments
-		</mat-toolbar-row>
 
-		<mat-divider></mat-divider>
+<div class="sub-product-container">
+	<mat-toolbar class="side-tool-bar">
+		<mat-toolbar-row class="mat-toolbar-row" (click)="rowClick(0)" >
+				<button mat-button color="primary">Overview</button>
+		</mat-toolbar-row>
+		<mat-toolbar-row class="mat-toolbar-row" (click)="rowClick(1)" >
+				<button mat-button color="accent">Comments</button>
+		</mat-toolbar-row>
 		<mat-toolbar-row class="mat-toolbar-row" (click)="goBack()">
-			Go Back
+				<button mat-button color="warm">Go Bank</button>
 		</mat-toolbar-row>
 	</mat-toolbar>
-  </mat-sidenav>
-  <mat-sidenav-content class="sidenav-content">
-  	<div class="content-info" >
+	<div class="content-info" >
   		<product-content *ngIf="productContent" [productInfo]="productContent" 
   		(contentBtnClick)="changedHandler($event)"></product-content>
   	</div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+</div>	

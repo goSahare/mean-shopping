@@ -12,13 +12,21 @@
 		</mat-toolbar-row>
 	</mat-toolbar>
 	<div *ngIf="items">
-		<div *ngFor="let item of items" >
-			<h4 >Title </h4>
-				<hr>
-			<h4><a [routerLink]="['/product-info', item._id]" >{{item.title}}</a></h4>
-			<h4>Description </h4>
-				<hr>
-			<h6>{{item.description}}</h6>
+		<div *ngFor="let item of items" class="item-container">
+			<img alt="Image not found" [src]="'../../assets/images/160/' + 			item.images[item.mainImageIndex]">
+			<div>
+				<h4 >Title : <a [routerLink]="['/product-info', item._id]" >
+					{{item.title}}</a></h4>
+				<h4>Description </h4>
+					<hr>
+				<h6>{{item.description}}</h6>
+
+				<div class="pro-buttons">
+					<button mat-button type="button" name="Add To"
+						addToCart [clickedItem]="item">Add To</button>
+					<button mat-button type="button" name="Buy now">Buy now</button> 
+				</div>
+			</div>
 		</div>
 	</div>	
 </div>		

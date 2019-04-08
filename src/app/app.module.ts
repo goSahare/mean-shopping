@@ -24,6 +24,7 @@ import { ProductInfoComponent } from './product-info/product-info.component';
 import { ProductContentComponent } from './product-content/product-content.component';
 import { SortByPipe } from './pipes/sort-by.pipe';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { AddToCartDirective } from './diretives/add-to-cart.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ProductInfoComponent,
     ProductContentComponent,
     SortByPipe,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    AddToCartDirective
   ],
   imports: [
     BrowserModule,

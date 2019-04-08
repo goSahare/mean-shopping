@@ -9,9 +9,9 @@
 					{{item.title | titlecase}}</a>
 			<p class="description">{{item.description | slice : 0 : 80}} ...</p>
 			<div class="pro-buttons">
-				<input type="button" name="Add To" value="Add To" 
-				(click)="addToClick(item)">
-				<input type="button" name="Buy now" value="Buy now">
+				<button mat-button type="button" name="Add To"
+					addToCart [clickedItem]="item">Add To</button>
+				<button mat-button type="button" name="Buy now">Buy now</button> 
 			</div>
 	</div>
 </div>	

@@ -8,7 +8,7 @@ import { Component, OnInit,Input } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title = 'case-study';
-  currentSort = 'inc';
+  currentSort = 'dec';
   sortBy  = {
   	inc : {
   		title : 'Price Up',

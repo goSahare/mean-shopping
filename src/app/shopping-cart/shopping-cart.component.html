@@ -15,8 +15,10 @@
 </button>
 
 <mat-menu #menu="matMenu">
-  In cart {{totalItems}} of price $ {{totalPrice}}
-
-  <input type="button" value ="Procced to check out">
+  	<!-- <div *ngIf="cart else cartEmpty" *ngFor="let mobile of cart">
+  		<div> Title : {{mobile.mobileTitle}}</div>
+  		<button mat-button >Procced to check out</button> 
+  	</div> -->
+  	<!-- <ng-template #cartEmpty>Seems like you havent got salary</ng-template> -->
 </mat-menu>
 

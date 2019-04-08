@@ -3,7 +3,7 @@ import { Observable, BehaviorSubject,Subject } from 'rxjs'
 
 
 export interface CartItem {
-	mobile: number,
+	id: number,
 	mobileTitle : string,
 	price : number,
 	quantity : number
@@ -26,8 +26,8 @@ export class CartService {
   	let added : boolean = false;
   	let itemToAdd; 
   	if(_cart){
-  		_cart.forEach(arr =>{
-  			if(arr.mobile == item.mobile){
+  		_cart.map(arr =>{
+  			if(arr.id == item._id){
 	  			added = true;
 	  			arr.quantity++;
 	  		}

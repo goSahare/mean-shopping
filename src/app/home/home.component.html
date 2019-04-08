@@ -8,8 +8,8 @@
 		<div class="sort-by" >
 			<span>Sort by:</span>
 			<div ngbDropdown class="d-inline-block">
-			<button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>	
-				{{sortBy[currentSort].title}} </button>
+			<button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+				{{currentSort == '' ? 'Price Up' : sortBy[currentSort].title}} </button>
 				<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
 					<button ngbDropdownItem (click)="sortByButton('dec')">
 						Price Down</button>

@@ -3,11 +3,16 @@
   		<div class="product-content">
   			<img alt="Image not found" [src]="'../../assets/images/160/' + 			productInfo.images[productInfo.mainImageIndex]">
   			<div>
-				<h4 >Title </h4>
-				<h4>{{productInfo.title}}</h4>
+				<h4 >Title : {{productInfo.title}}</h4>
 				<hr>
 				<h4>Description </h4>
 				<h6>{{productInfo.description}}</h6>
+
+				<div class="pro-buttons">
+					<button mat-button type="button" name="Add To"
+						addToCart [clickedItem]="productInfo">Add To</button>
+					<button mat-button type="button" name="Buy now">Buy now</button> 
+				</div>
 			</div>
 		</div>
   </mat-tab>

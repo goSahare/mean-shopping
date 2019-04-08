@@ -6,11 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SortByPipe implements PipeTransform {
 
   transform(value: any, direction: any): any {
-
-  	if (direction == 'dec')
-  		return value.reverse();
-  	else 
-  		return value.sort((a,b) => a['id'] - b['id']);
-
+  	return (direction == 'dec') ? value.reverse() : 
+  		 value.sort((a,b) => a['price'] - b['price']);
 	}
 }
